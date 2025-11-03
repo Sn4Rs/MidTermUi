@@ -1,153 +1,153 @@
-# Qt UI Design Studio Use Case: Smart Home Control Dashboard
+# Qt UI Design Studio 使用案例：智慧家居控制儀表板
 
-## 1. Overview
+## 1. 概述
 
-This use case demonstrates how Qt UI Design Studio creates a modern smart home control dashboard for residential automation. The project showcases designer-developer collaboration to build a responsive interface controlling lighting, climate, security, and entertainment systems.
+本使用案例展示了 Qt UI Design Studio 如何創建現代化的智慧家居控制儀表板，用於住宅自動化。該專案展示了設計師與開發人員的協作，以建構一個響應式介面，控制照明、氣候、安全和娛樂系統。
 
-## 2. Actors
+## 2. 參與者
 
-**Primary Actors:**
-- **UI/UX Designer (Sarah)**: Creates visual designs, animations, and interactive prototypes
-- **QML Developer (Michael)**: Implements business logic and integrates backend services
-- **Product Manager (Lisa)**: Defines requirements and reviews design iterations
+**主要參與者：**
+- **UI/UX 設計師 (Sarah)**：創建視覺設計、動畫和互動原型
+- **QML 開發人員 (Michael)**：實作業務邏輯並整合後端服務
+- **產品經理 (Lisa)**：定義需求並審查設計迭代
 
-**Secondary Actors:**
-- End Users: Homeowners using tablets and smartphones to control their smart home
+**次要參與者：**
+- 終端使用者：使用平板電腦和智慧型手機控制智慧家居的屋主
 
-## 3. Business Context
+## 3. 業務背景
 
-TechHome Solutions is developing a premium smart home control application for their automation system. They need a visually stunning, performant interface working seamlessly across devices (wall-mounted tablets, iPads, Android phones). The interface must feel fluid while providing quick access to essential controls.
+TechHome Solutions 正在為其自動化系統開發一款高階智慧家居控制應用程式。他們需要一個視覺上令人驚艷且高效能的介面，能在各種裝置（壁掛式平板電腦、iPad、Android 手機）上無縫運作。該介面必須流暢，同時提供對關鍵控制的快速存取。
 
-## 4. Goals
+## 4. 目標
 
-**Primary Goals:**
-- Enable design-first workflow for rapid iteration without coding
-- Build reusable UI components with consistent look and feel
-- Implement smooth animations for premium experience
-- Enable parallel designer-developer work
-- Reduce development time by 40% vs. traditional approach
+**主要目標：**
+- 實現設計優先的工作流程，無需編碼即可快速迭代
+- 建構具有一致外觀和感覺的可重複使用 UI 元件
+- 實作流暢的動畫以提供高階體驗
+- 實現設計師與開發人員的平行工作
+- 相比傳統方法減少 40% 的開發時間
 
-**Quality Attributes:**
-- Responsive design supporting 7" to 12" displays
-- 60 FPS animations
-- Intuitive touch interactions
-- Accessibility compliance
+**品質屬性：**
+- 支援 7 吋至 12 吋顯示器的響應式設計
+- 60 FPS 動畫
+- 直覺的觸控互動
+- 無障礙合規性
 
-## 5. Preconditions
+## 5. 前置條件
 
-- Qt Design Studio 4.x installed on designer workstations
-- Qt Creator with Qt 6.5+ configured for developers
-- Design system with color palette, typography, and icons defined
-- Figma mockups approved by stakeholders
-- Backend API specifications documented
+- 設計師工作站上已安裝 Qt Design Studio 4.x
+- 開發人員已配置 Qt Creator 與 Qt 6.5+
+- 已定義包含色彩調色板、字體排版和圖示的設計系統
+- 相關方已核准 Figma 模型
+- 已記錄後端 API 規格
 
-## 6. Detailed Workflow
+## 6. 詳細工作流程
 
-### Phase 1: Design Creation (Weeks 1-2)
+### 階段 1：設計創建（第 1-2 週）
 
-**Step 1: Project Setup**
-Sarah launches Qt Design Studio and creates a "Home Dashboard" project using the Mobile Application template. She configures base resolution (1920×1080) and defines breakpoints for different devices.
+**步驟 1：專案設置**
+Sarah 啟動 Qt Design Studio，並使用行動應用程式範本創建「家居儀表板」專案。她配置基本解析度（1920×1080）並定義不同裝置的斷點。
 
-**Step 2: Component Library**
-Using the visual editor, Sarah creates reusable components:
-- **RoomCard**: Displays room name, temperature, lighting status with background image
-- **DeviceToggle**: Animated switch with state transitions
-- **SliderControl**: Custom slider for brightness/temperature with gradient fill
-- **QuickAccessButton**: Circular button with icon and label
+**步驟 2：元件庫**
+使用視覺編輯器，Sarah 創建可重複使用的元件：
+- **RoomCard**：顯示房間名稱、溫度、照明狀態及背景圖片
+- **DeviceToggle**：具有狀態轉換的動畫開關
+- **SliderControl**：用於亮度/溫度的自訂滑桿，具有漸層填充
+- **QuickAccessButton**：帶有圖示和標籤的圓形按鈕
 
-She uses States to define "off," "on," and "dimmed" states, applying different colors, opacity, and effects. Timeline animations smooth state transitions.
+她使用狀態來定義「關閉」、「開啟」和「調暗」狀態，套用不同的顏色、不透明度和效果。時間軸動畫使狀態轉換更流暢。
 
-**Step 3: Main Dashboard**
-Sarah constructs the dashboard using:
-- Grid layout for room cards (2×3 for tablets)
-- Column layout for vertical scrolling on phones
-- Custom navigation bar with tabs
+**步驟 3：主儀表板**
+Sarah 使用以下方式建構儀表板：
+- 房間卡片的網格佈局（平板電腦為 2×3）
+- 手機上垂直捲動的列佈局
+- 帶有分頁的自訂導覽列
 
-She imports SVG icons and adds parallax scrolling effects.
+她匯入 SVG 圖示並添加視差捲動效果。
 
-**Step 4: Interactive Prototype**
-Using connection editor, Sarah creates behaviors:
-- Click RoomCard → navigate to room control
-- Swipe left/right → switch dashboard tabs
-- Long-press DeviceToggle → open settings
+**步驟 4：互動原型**
+使用連接編輯器，Sarah 創建行為：
+- 點擊 RoomCard → 導航至房間控制
+- 左右滑動 → 切換儀表板分頁
+- 長按 DeviceToggle → 開啟設定
 
-She tests in live preview, adjusting animations and timing curves.
+她在即時預覽中測試，調整動畫和時間曲線。
 
-### Phase 2: Design Handoff (Week 3)
+### 階段 2：設計交接（第 3 週）
 
-**Step 5: Review and Iteration**
-Sarah exports an interactive prototype and shares it via presentation mode. The team provides feedback on touch targets, haptic indicators, and color contrast. Sarah makes revisions directly in Design Studio, regenerating prototypes in minutes.
+**步驟 5：審查和迭代**
+Sarah 匯出互動原型並透過簡報模式分享。團隊就觸控目標、觸覺指示器和色彩對比度提供回饋。Sarah 直接在 Design Studio 中進行修改，在幾分鐘內重新生成原型。
 
-**Step 6: Asset Export**
-Once approved, Sarah exports:
-- QML code for components and screens
-- Image assets at multiple resolutions
-- Animation specifications and state machines
+**步驟 6：資產匯出**
+一旦獲得核准，Sarah 匯出：
+- 元件和畫面的 QML 程式碼
+- 多種解析度的圖片資產
+- 動畫規格和狀態機
 
-### Phase 3: Development Integration (Weeks 3-5)
+### 階段 3：開發整合（第 3-5 週）
 
-**Step 7: Project Integration**
-Michael imports the project into Qt Creator. Exported QML files maintain structure and visual fidelity. He organizes:
+**步驟 7：專案整合**
+Michael 將專案匯入 Qt Creator。匯出的 QML 檔案保持結構和視覺保真度。他組織如下：
 ```
 /src
-  /ui (Design Studio generated)
+  /ui (Design Studio 生成)
   /backend
 ```
 
-**Step 8: Backend Integration**
-Michael creates QML backend singletons:
-- **HomeController**: Manages room/device states
-- **ApiClient**: Handles REST API communication
-- **NotificationService**: Displays alerts
+**步驟 8：後端整合**
+Michael 創建 QML 後端單例：
+- **HomeController**：管理房間/裝置狀態
+- **ApiClient**：處理 REST API 通訊
+- **NotificationService**：顯示警報
 
-He uses property bindings to connect UI to backend without modifying Design Studio QML.
+他使用屬性綁定將 UI 連接到後端，而無需修改 Design Studio QML。
 
-**Step 9: Business Logic**
-Michael implements:
-- Device control logic
-- Real-time WebSocket updates
-- Authentication and settings
-- Offline mode with cached state
+**步驟 9：業務邏輯**
+Michael 實作：
+- 裝置控制邏輯
+- 即時 WebSocket 更新
+- 身份驗證和設定
+- 具有快取狀態的離線模式
 
-### Phase 4: Testing and Refinement (Week 6)
+### 階段 4：測試和優化（第 6 週）
 
-**Step 10: Performance Optimization**
-Team profiles with QML Profiler:
-- Optimizes async image loading
-- Implements lazy loading for cards
-- Reduces shader complexity
+**步驟 10：效能優化**
+團隊使用 QML Profiler 進行分析：
+- 優化非同步圖片載入
+- 實作卡片的延遲載入
+- 降低著色器複雜度
 
-**Step 11: Design Updates**
-For design changes (e.g., night mode), Sarah:
-- Opens Design Studio project
-- Creates "NightMode" state
-- Updates colors using batch editing
-- Exports updated QML
+**步驟 11：設計更新**
+對於設計變更（例如夜間模式），Sarah：
+- 開啟 Design Studio 專案
+- 創建「NightMode」狀態
+- 使用批次編輯更新顏色
+- 匯出更新的 QML
 
-Michael integrates by replacing UI files; backend connections remain intact.
+Michael 透過替換 UI 檔案進行整合；後端連接保持完整。
 
-## 7. Outcomes
+## 7. 成果
 
-**Quantitative:**
-- Prototype completed in 2 weeks vs. 5 weeks traditionally
-- 15 reusable components across 12 screens
-- Zero design-to-development translation errors
-- 30% reduction in iteration cycles
+**量化指標：**
+- 原型在 2 週內完成，相較於傳統方法的 5 週
+- 在 12 個畫面中建立 15 個可重複使用的元件
+- 零設計到開發的翻譯錯誤
+- 迭代週期減少 30%
 
-**Qualitative:**
-- Designers maintained creative control without coding
-- Developers focused on business logic
-- Product manager tested realistic prototypes early
-- Consistent visual design throughout
+**質化指標：**
+- 設計師在無需編碼的情況下保持創意控制
+- 開發人員專注於業務邏輯
+- 產品經理提早測試真實的原型
+- 整體視覺設計保持一致
 
-## 8. Alternative Flows
+## 8. 替代流程
 
-**Design Changes After Development:**
-Sarah can re-export components from Design Studio. Michael uses UI/Logic separation to ensure backend code isn't affected.
+**開發後的設計變更：**
+Sarah 可以從 Design Studio 重新匯出元件。Michael 使用 UI/邏輯分離來確保後端程式碼不受影響。
 
-**Platform-Specific Customizations:**
-Developers create platform-specific delegates while reusing Design Studio's core visual components.
+**平台特定的自訂：**
+開發人員創建平台特定的代理，同時重複使用 Design Studio 的核心視覺元件。
 
-## 9. Conclusion
+## 9. 結論
 
-Qt Design Studio enabled TechHome Solutions to create a premium smart home interface through efficient designer-developer collaboration. The visual design tool eliminated communication gaps, accelerated iteration, and delivered a polished, performant application exceeding stakeholder expectations. The component-based workflow established a sustainable design system for future development.
+Qt Design Studio 讓 TechHome Solutions 能夠透過高效的設計師與開發人員協作創建高階智慧家居介面。該視覺設計工具消除了溝通障礙，加速了迭代，並交付了一個超越相關方期望的精緻高效能應用程式。基於元件的工作流程為未來開發建立了可持續的設計系統。
