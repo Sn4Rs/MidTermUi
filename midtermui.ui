@@ -13,6 +13,19 @@
   <property name="windowTitle">
    <string>MidTermUi</string>
   </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>280</y>
+     <width>231</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>PUSH</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>
